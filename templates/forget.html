@@ -14,7 +14,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Login</title>
+    <title>Forgot Password</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -246,7 +246,7 @@
                 data-wow-duration="1.0s"
                 style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;"
               >
-                <a href="#2"><button class="btn3">Login!</button></a>
+                <a href="#2"><button class="btn3">Reset Password</button></a>
               </div>
             </div>
           </div>
@@ -258,22 +258,28 @@
           <div class="container" style="transform: translateY(400px);">
             <div class="login-reg-panel">
               <div class="register-info-box">
-                <h2>Don't have an account?</h2>
-                <a href="register.html" id="label-login" for="log-login-show" >Register</a>
-                <input
-                  type="radio"
-                  name="active-log-panel"
-                  id="log-login-show"
-                />
+                  <p style="font-size: 25px;">Just answer anyone of the following questions given in the menu.</p>
               </div>
 
               <div class="white-panel">
                 <div class="login-show">
-                  <h2>LOGIN</h2>
+                  <h2>FORGOT PASSWORD</h2>
                   <input type="text" placeholder="Email" />
-                  <input type="password" placeholder="Password" />
-                  <input type="button" value="Login" />
-                  <a href="forget.html">Forgot password?</a>
+                  <form>
+                    <fieldset>
+                      <p>
+                        <label>Questions:</label><br>
+                        <select id="Currency1">
+                          <option value="1">one</option>
+                          <option value="2">two</option>
+                          <option value="3">three</option>
+                          <option value="4">four</option>
+                        </select><br><br>
+                        <label>Answer:</label><br>
+                      <input type="text" name="Answer" placeholder="Answer" />
+                      </p>
+                    </fieldset>
+                  <input type="button" value="Done" />
                 </div>
               </div>
             </div>
