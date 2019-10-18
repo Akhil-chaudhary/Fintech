@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en"><meta
+<html class="no-js" lang="en">
+  <meta
     http-equiv="content-type"
     content="text/html;charset=utf-8"
   /><!-- /Added by HTTrack -->
   <head>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Expense Manager</title>
+    <title>Login</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -33,10 +41,13 @@
     <link href="../static/css/video-js.css" rel="stylesheet" />
     <!-- style css -->
     <link rel="stylesheet" href="../static/../static/css/style.css" />
+
+    <link rel="stylesheet" href="../static/../static/css/login.css" />
     <!-- responsive css -->
     <link rel="stylesheet" href="../static/css/responsive.css" />
     <!-- modernizr css -->
     <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="../static/js/login.js"></script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -49,7 +60,11 @@
     <!-- preloader Start -->
     <div id="preloader">
       <div id="status">
-        <img src="../static/images/banner/loader.gif" id="preloader_image" alt="loader" />
+        <img
+          src="../static/images/banner/loader.gif"
+          id="preloader_image"
+          alt="loader"
+        />
       </div>
     </div>
     <!--Header area start here-->
@@ -97,11 +112,6 @@
                     </li>
                     <li><img src="../static/images/icons/12.png" alt="" /></li>
                   </ul>
-                </div>
-                <div class="login-btn">
-                  <a href="index.html" class="btn1"
-                    ><i class="fa fa-user"></i><span>Login</span></a
-                  >
                 </div>
               </div>
               <!-- mobile menu area start -->
@@ -196,7 +206,8 @@
                   class="f-40 fw-400 wow  fadeInUp animated"
                   data-wow-duration="1.0s"
                   style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;"
-                >Expense Manager
+                >
+                  Be a part of our community
                 </h2>
                 <p
                   class="wow  fadeInUp animated"
@@ -235,7 +246,7 @@
                 data-wow-duration="1.0s"
                 style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;"
               >
-                <a href="#2"><button class="btn3">Try Now!</button></a>
+                <a href="#2"><button class="btn3">Login!</button></a>
               </div>
             </div>
           </div>
@@ -244,133 +255,57 @@
       <!--form-->
       <div id="2">
         <section>
-          <div class="container">
-            <div class="row" style="flex: ;">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+          <div class="container" style="transform: translateY(400px);">
+            <div class="login-reg-panel">
+              <div class="login-info-box">
+                <h2>Have an account?</h2>
+                <label id="label-register" for="log-reg-show">Login</label>
+                <input
+                  type="radio"
+                  name="active-log-panel"
+                  id="log-reg-show"
+                  checked="checked"
+                />
+              </div>
+
+              <div class="register-info-box">
+                <h2>Don't have an account?</h2>
+                <label id="label-login" for="log-login-show">Register</label>
+                <input
+                  type="radio"
+                  name="active-log-panel"
+                  id="log-login-show"
+                />
+              </div>
+
+              <div class="white-panel">
+                <div class="login-show">
+                  <h2>LOGIN</h2>
+                  <input type="text" placeholder="Email" />
+                  <input type="password" placeholder="Password" />
+                  <input type="button" value="Login" />
+                  <a href="">Forgot password?</a>
+                </div>
+                <div class="register-show">
+                  <h2>REGISTER</h2>
+                  <input type="text" placeholder="Email" />
+                  <input type="password" placeholder="Password" />
+                  <input type="password" placeholder="Confirm Password" />
+                  <input type="button" value="Register" />
+                </div>
               </div>
             </div>
-            <div
+            <!--<div
               class="about-img wow  fadeInUp animated"
               data-wow-duration="1.0s"
               style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;"
             >
-              <a href="#2"><button class="btn3">Add loan</button></a>
-            </div>
+              <a href="#2"><button class="btn3">Login</button></a>
+            </div>-->
           </div>
         </section>
       </div>
       <!--main area end here-->
-      <!--Footer area start here-->
-      <footer id="5" class="top-foo">
-        <div id="footer-js">
-          <div class="footer-top section">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="con">
-                    <h2
-                      class="wow  fadeInUp animated"
-                      data-wow-duration="1.0s"
-                      style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;"
-                    >
-                      Subscribe to us!
-                    </h2>
-                    <ul>
-                      <li
-                        class="wow  fadeInUp animated"
-                        data-wow-duration="1.3s"
-                        style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;"
-                      >
-                        <a href="index.html"><i class="fa fa-facebook"></i></a>
-                      </li>
-                      <li
-                        class="wow  fadeInUp animated"
-                        data-wow-duration="1.5s"
-                        style="visibility: visible; animation-duration: 1.5; animation-name: fadeInUp;"
-                      >
-                        <a href="index.html"><i class="fa fa-twitter"></i></a>
-                      </li>
-                      <li
-                        class="wow  fadeInUp animated"
-                        data-wow-duration="1.9s"
-                        style="visibility: visible; animation-duration: 1.9s; animation-name: fadeInUp;"
-                      >
-                        <a href="index.html"><i class="fa fa-send-o"></i></a>
-                      </li>
-                      <li
-                        class="wow  fadeInUp animated"
-                        data-wow-duration="2.1s"
-                        style="visibility: visible; animation-duration: 2.1s; animation-name: fadeInUp;"
-                      >
-                        <a href="index.html"><i class="fa fa-bitcoin"></i></a>
-                      </li>
-                      <li
-                        class="wow  fadeInUp animated"
-                        data-wow-duration="2.4s"
-                        style="visibility: visible; animation-duration: 2.4s; animation-name: fadeInUp;"
-                      >
-                        <a href="index.html"><i class="fa fa-envelope"></i></a>
-                      </li>
-                    </ul>
-                    <div class="row">
-                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div
-                          class="search_btm wow  fadeInUp animated"
-                          data-wow-duration="2.6s"
-                          style="visibility: visible; animation-duration: 2.6s; animation-name: fadeInUp;"
-                        >
-                          <div class="search_main">
-                            <input
-                              type="text"
-                              placeholder="enter your email address"
-                            />
-                            <button type="submit">subscribe</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <footer class="foo-bot">
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div
-                  class="copyright wow  fadeInUp animated"
-                  data-wow-duration="1.9s"
-                  style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;"
-                >
-                  <p>
-                    © 2019-2020 <a href="index.html"><span>Fin Tech</span></a> |
-                    All rights reserved. Design by
-                    <a href="index.html" target="_blank">
-                      <span>The Descifradors</span></a
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div
-                  class="foo-link wow  fadeInUp animated"
-                  data-wow-duration="1.0s"
-                  style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;"
-                >
-                  <ul>
-                    <li><a href="index.html">Terms of Service</a></li>
-                    <li><a href="index.html">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
     <!--Footer area end here-->
     <!-- all js here -->

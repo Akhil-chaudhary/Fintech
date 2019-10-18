@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   overflow-x:hidden;
   background:#10122d;
+  scroll-behavior: smooth;
 }
 /*-- Preloader css start --*/
 #preloader {
