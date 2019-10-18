@@ -1,4 +1,4 @@
-
+   
 @import url('https://fonts.googleapis.com/css?family=Mukta');
 body{
   font-family: 'Mukta', sans-serif;
@@ -13,6 +13,9 @@ body{
 a{
   text-decoration:none;
   color:white;
+}
+input{
+  color: #08091b;
 }
 .login-reg-panel{
     position: relative;
@@ -46,18 +49,6 @@ a{
 .login-reg-panel{
     color:white;
 }
-.login-reg-panel #label-login,
-.login-reg-panel #label-register{
-    border:1px solid #9E9E9E;
-    padding:5px 5px;
-    width:150px;
-    display:block;
-    text-align:center;
-    border-radius:10px;
-    cursor:pointer;
-    font-weight: 600;
-    font-size: 18px;
-}
 .login-info-box{
     width:30%;
     padding:0 50px;
@@ -73,11 +64,11 @@ a{
     right:0;
     position:absolute;
     text-align:left;
-
+    
 }
 .right-log{right:50px !important;}
 
-.login-show,
+.login-show, 
 .register-show{
     z-index: 1;
     display:none;
@@ -116,6 +107,15 @@ a{
 .login-show a{
     display:inline-block;
     padding:10px 0;
+}
+
+.register-show input[type="text"], .register-show input[type="password"]{
+  width: 100%;
+  display: block;
+  margin:20px 0;
+  padding: 15px;
+  border: 1px solid #b5b5b5;
+  outline: none;
 }
 .credit {
     position:absolute;
@@ -172,10 +172,10 @@ a{
   background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
     color: #fff;
-
+    
   }
-
-.register-show input[type="button"] {
+  
+.login-reg-panel #label-login {
     display: inline-block;
     line-height: 50px;
     height: 50px;
@@ -194,7 +194,7 @@ a{
     animation-delay: 2.4s
   }
   @media only screen and (max-width: 480px) {
-    .register-show input[type="button"] {
+    .login-reg-panel #label-login {
       padding: 0 20px;
       height: 40px;
       line-height: 36px;
@@ -202,7 +202,7 @@ a{
       border: 2px solid #3d3f69;
     }
   }
-  .register-show input[type="button"]:hover {
+  .login-reg-panel #label-login:hover {
   background: rgba(45,193,201,1);
   background: -moz-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,193,201,1)), color-stop(100%, rgba(57,100,208,1)));
@@ -211,11 +211,5 @@ a{
   background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
     color: #fff;
-
+    
   }
-
-.validation{
-  display: block !important;
-  height:50px !important;
-  width:50vh !important;
-}

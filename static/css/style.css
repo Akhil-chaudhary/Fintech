@@ -4695,9 +4695,12 @@ form>fieldset>p>select:hover{
   background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
     color: #fff;
 }
-form>fieldset>p>input{
+form>fieldset>p>input,#currencyChange{
   display: inline-block;
   line-height: 50px;
   height: 50px;
   border-radius: 50px;
+}
+option{
+  background: #08091b;
 }
