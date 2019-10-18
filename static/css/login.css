@@ -1,4 +1,4 @@
-   
+
 @import url('https://fonts.googleapis.com/css?family=Mukta');
 body{
   font-family: 'Mukta', sans-serif;
@@ -46,7 +46,7 @@ a{
 .login-reg-panel{
     color:white;
 }
-.login-reg-panel #label-login, 
+.login-reg-panel #label-login,
 .login-reg-panel #label-register{
     border:1px solid #9E9E9E;
     padding:5px 5px;
@@ -73,11 +73,11 @@ a{
     right:0;
     position:absolute;
     text-align:left;
-    
+
 }
 .right-log{right:50px !important;}
 
-.login-show, 
+.login-show,
 .register-show{
     z-index: 1;
     display:none;
@@ -172,9 +172,9 @@ a{
   background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
     color: #fff;
-    
+
   }
-  
+
 .register-show input[type="button"] {
     display: inline-block;
     line-height: 50px;
@@ -211,5 +211,11 @@ a{
   background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
     color: #fff;
-    
+
   }
+
+.validation{
+  display: block !important;
+  height:50px !important;
+  width:50vh !important;
+}
