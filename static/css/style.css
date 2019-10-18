@@ -469,6 +469,7 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
 }
 
 .btn3 {
+
   display: inline-block;
   line-height: 50px;
   height: 50px;
@@ -496,6 +497,7 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
   }
 }
 .btn3:hover {
+  cursor: pointer;
 background: rgba(45,193,201,1);
 background: -moz-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
 background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,193,201,1)), color-stop(100%, rgba(57,100,208,1)));
@@ -1970,7 +1972,7 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
   color: #fff;
   margin: 0 0 50px;
   text-shadow: 0 5px 30px rgba(44, 46, 83, 0.3);
-  animation-delay: 1.8s
+  animation-delay: 0.7s
 }
 @media only screen and (max-width: 768px) {
   .slider-area .slider-content h2 {
