@@ -270,9 +270,12 @@
               <div class="white-panel">
                 <div class="login-show">
                   <h2>LOGIN</h2>
-                  <input type="text" placeholder="Email" />
-                  <input type="password" placeholder="Password" />
-                  <input type="button" value="Login" />
+                  <form>
+                  <input type="email" name="email" placeholder="Someone@something.com" />
+                  <input type="password" name="password" placeholder="Password" />
+                  {{error}}<br>
+                  <button class="btn3" type="submit">Login</button>
+                  </form>
                   <a href="forget.html">Forgot password?</a>
                 </div>
               </div>

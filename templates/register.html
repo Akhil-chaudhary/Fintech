@@ -271,10 +271,13 @@
               <div class="white-panel">
                 <div class="login-show">
                   <h2>REGISTER</h2>
-                  <input type="text" placeholder="Email" />
-                  <input type="password" placeholder="Password" />
-                  <input type="password" placeholder="Confirm Password" />
-                  <input type="button" value="Register" />
+                  <form>
+                  <input type="email" name="email" placeholder="Someone@something.com" />
+                  <input type="password" name="password" placeholder="Password" />
+                  <input type="password" name="confirmation" placeholder="Confirm Password" />
+                  {{error}}<br>
+                  <button class="btn3" type="submit">Register</button>
+                  </form>
                 </div>
               </div>
             </div>
