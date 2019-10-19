@@ -79,7 +79,7 @@ body {
 }
 /*Responsive Media*/
 /* ....................................
-1.1 Reset CSS 
+1.1 Reset CSS
 .......................................*/
 a {
   transition: all 0.5s;
@@ -412,7 +412,7 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
   color: #fff;
   text-transform: uppercase;
   animation-delay: 2.4s
-  
+
 }
 @media only screen and (max-width: 480px) {
   .btn1 {
@@ -506,7 +506,7 @@ background: -o-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 1
 background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
 background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   color: #fff;
-  
+
 }
 
 /*** Reset ***/
@@ -607,7 +607,7 @@ background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 
 	position:absolute;
 	top:50%;
 	float:left;
-	width:100%;	
+	width:100%;
 }
 .carousel-nevigation > .prev{
 	left:-138px;
@@ -2143,7 +2143,7 @@ background: -o-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 1
 background: -ms-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
 background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   color: #fff;
-  
+
 }
 .btn4 button{
 	background:transparent;
@@ -2712,7 +2712,7 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
 	  height:40px !important;
 	  line-height:30px !important;
   }
-  .video-des .deslidt ul li .left-con .box-con .dbox .content, 
+  .video-des .deslidt ul li .left-con .box-con .dbox .content,
   .video-des .deslidt ul li .right-con .box-con .dbox .content,
   .video-des .deslidt ul li .center-con .box-con .dbox .content{
 	  padding:0 !important;
@@ -3102,14 +3102,14 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
 	float:left !important;
     padding-left: 8px;
     padding-right: 8px;
-	
+
   }
 }
 @media (max-width: 580px){
 	 .currency-area .rete-list {
 		width: 100%;
 		float:left !important;
-		
+
 	  }
 }
 @media only screen and (max-width: 480px) {
@@ -3469,7 +3469,7 @@ background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 
 }
 .token-details .owl-wrapper-outer {
   z-index: 999;
-  
+
 }
 .token-details .owl-controls {
   margin: 0;
@@ -4647,7 +4647,7 @@ background: linear-gradient(to right, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 
 .slider-area{
 	position:relative;
 	background:#08091b;
-} 
+}
 canvas{
 	position:absolute;
 	width:100% !important;
@@ -4666,7 +4666,7 @@ canvas{
   position: relative;
 }
 form>fieldset>p>select{
-  
+
   display: inline-block;
   line-height: 50px;
   height: 50px;
@@ -4683,11 +4683,11 @@ background: linear-gradient(to right, rgba(57,100,208,1) 0%, rgba(45,193,201,1) 
   color: #fff;
   text-transform: uppercase;
   animation-delay: 2.4s
-  
+
 }
 
 form>fieldset>p>select:hover{
-  
+
   background: rgba(45,193,201,1);
   background: -moz-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,193,201,1)), color-stop(100%, rgba(57,100,208,1)));
@@ -4705,4 +4705,7 @@ form>fieldset>p>input,#currencyChange{
 }
 option{
   background: #08091b;
+}
+.logged{
+  color:white;
 }
