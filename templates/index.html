@@ -49,7 +49,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-6">
                         <div class="logo-area">
-                            <a href="/"><img style="height:50px;filter: invert(100%);" src="../static/../static/images/logo/logo.png" alt="logo" /></a>
+                            <a href="#"><img style="height:50px;filter: invert(100%);" src="../static/../static/images/logo/logo.png" alt="logo" /></a>
                         </div>
                     </div>
                     <!-- Mobile Menu  Start -->
@@ -114,6 +114,7 @@
                                 <div id="toggle_close">&times;</div>
                                 <div id='cssmenu' class="wd_single_index_menu">
                                     <ul>
+                                        <li><a href="/login">Login</a></li>
                                         <li><a href="#">Home</a></li>
                                         <li><a href="#1">About</a></li>
                                         <li><a href="#3">Tools</a></li>
@@ -218,7 +219,9 @@
                                             <div class="slider-content">
 
                                                 <h2 data-animation="animated bounceInLeft">Loan Manager</h2>
-                                                <a href="/loan" class="btn3">Try now!</a>
+
+                                                <img style="width: 100px;" src="https://media.giphy.com/media/l0Iyn34fotpL8K9wI/giphy.gif"/><br>
+                                                <a href="/loan" class="btn3">Coming Soon!</a>
 
                                             </div>
                                         </div>
@@ -285,8 +288,7 @@
                                             <div class="slider-content">
 
                                                 <h2 data-animation="animated bounceInLeft">Tax Calculator</h2>
-                                                <img style="width: 100px;" src="https://media.giphy.com/media/l0Iyn34fotpL8K9wI/giphy.gif"/><br>
-                                                <a href="/tax" class="btn3">Coming Soon!</a>
+                                                <a href="/tax" class="btn3">Try Now!</a>
 
                                             </div>
                                         </div>
@@ -1324,6 +1326,47 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="section-heading2">
+                            <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Latest News</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="blog-slider">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">
+                                <figure><img src="{{urlToImage}}" alt="" /></figure>
+                                <div class="content">
+                                    <span><i class="fa  fa-calendar-o"></i>{{publishedAt}}</span>
+                                    <h4><a href="{{url}}">{{title}}</a></h4>
+                                    <p>{{description}}</p>
+                                    <a href="{{url}}" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.6s" style="visibility: visible; animation-duration: 1.6s; animation-name: fadeInUp;">
+                                <figure><img src="../static/../static/images/blog/2.jpg" alt="" /></figure>
+                                <div class="content">
+                                    <span><i class="fa  fa-calendar-o"></i>January 29, 2018</span>
+                                    <h4><a href="#">Report about the team's trip to the road show</a></h4>
+                                    <p>Nam nec tellus a odio tincidunt auctor are odio sed non mauris. This is Photoshop's ern of Lorem Ipsum Proin gravida.</p>
+                                    <a href="#" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.8s" style="visibility: visible; animation-duration: 1.8s; animation-name: fadeInUp;">
+                                <figure><img src="../static/../static/images/blog/3.jpg" alt="" /></figure>
+                                <div class="content">
+                                    <span><i class="fa  fa-calendar-o"></i>January 29, 2018</span>
+                                    <h4><a href="#">Report about the team's trip to the road show</a></h4>
+                                    <p>Nam nec tellus a odio tincidunt auctor are odio sed non mauris. This is Photoshop's ern of Lorem Ipsum Proin gravida.</p>
+                                    <a href="#" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="blog">
                                 <figure><img src="../static/../static/images/blog/1.jpg" alt="" /></figure>
                                 <div class="content">
@@ -1356,48 +1399,6 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-heading2">
-                            <h2 class="wow  fadeInUp animated" data-wow-duration="1.0s" style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;">Latest News</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="blog-slider">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">
-                                <figure><img src="{{urlToImage}}" alt="" /></figure>
-                                <div class="content">
-                                    <span><i class="fa  fa-calendar-o"></i>{{publishedAt}}</span>
-                                    <h4><a href="#">{{title}}</a></h4>
-                                    <p>{{description}}</p>
-                                    <a href="{{url}}" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">
-                                <figure><img src="{{urlToImage}}" alt="" /></figure>
-                                <div class="content">
-                                    <span><i class="fa  fa-calendar-o"></i>{{publishedAt}}</span>
-                                    <h4><a href="#">{{title}}</a></h4>
-                                    <p>{{description}}</p>
-                                    <a href="{{url}}" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="blog wow  fadeInUp animated" data-wow-duration="1.3s" style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUp;">
-                                <figure><img src="{{urlToImage}}" alt="" /></figure>
-                                <div class="content">
-                                    <span><i class="fa  fa-calendar-o"></i>{{publishedAt}}</span>
-                                    <h4><a href="#">{{title}}</a></h4>
-                                    <p>{{description}}</p>
-                                    <a href="{{url}}" class="blog-btn">read more <i class="fa  fa-arrow-circle-o-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     <div class="view-btn">
                         <a href="#">All News</a>
