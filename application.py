@@ -40,7 +40,9 @@ def index():
         if session.get("user_id") is None:
             return render_template("index.html",key = "Logi")
         else:
-            return render_template("index.html",key="DEV")
+            userName = db.execute("select name from users where user_id=:i_d",i_d = session.get("user_id"))
+            key = userName[0]["name"]
+            return render_template("index.html",key=key)
 
     else:
         userlog = db.execute("SELECT is_logged FROM users WHERE user_id=:i_d;", i_d=session["user_id"])
@@ -99,11 +101,12 @@ def register():
     """Register user"""
     # User reached route via GET (as by clicking a link or via redirect)
     if request.method == "POST":
+        name = request.form.get("name")
         mail = request.form.get("email")
         password = request.form.get("password")
 
-        if not mail or not password:
-            error = "Please provide a Username and Password"
+        if not mail or not password or not name:
+            error = "Please provide a Name, Email and Password"
             return render_template("register.html", error = error)
 
         test = request.form.get("confirmation")
@@ -119,11 +122,9 @@ def register():
             error = "Provided Email is used in another account"
             return render_template("register.html", error = error)
 
-        db.execute("Insert into users(email,password,is_logged) values(:mail,:hash,:booled);", mail = request.form.get("email"), hash = phash, booled = 0)
+        db.execute("Insert into users(email,password,is_logged,name) values(:mail,:hash,:booled,:name);", mail = request.form.get("email"), hash = phash, booled = 0,name=name)
         row = db.execute("Select user_id from users where email = :mail;", mail = mail)
         session["user_id"] = row[0]["user_id"]
-
-        #db.execute("Insert into portfolio(user_id) values(:i)", i = row[0])
         return redirect("/")
 
     else:
