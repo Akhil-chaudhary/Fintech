@@ -39,31 +39,53 @@ def index():
     resNews = requests.get("https://newsapi.org/v2/everything?q=finance&from=2019-10-15&to=2019-10-15&sortBy=popularity&apiKey=16c14d73a1a24a76a5145fcda13637df")
     data = resNews.json()
     news = []
-    for i in range(6):
+    for i in range(1):
         if data["status"] == "ok":
-            dict={}
-            dict["title"] = data["articles"][i]["title"],
-            dict["description"] = data["articles"][i]["title"],
-            dict["url"] = data["articles"][i]["url"],
-            dict["urlToImage"] = data["articles"][i]["urlToImage"],
-            dict["publishedAt"]= data["articles"][i]["publishedAt"]
-        news.append(dict)
+            title1 = data["articles"][i]["title"]
+            description1 = data["articles"][i]["title"]
+            url1 = data["articles"][i]["url"]
+            urlToImage1 = data["articles"][i]["urlToImage"]
+            publishedAt1= data["articles"][i]["publishedAt"]
+
+            title2 = data["articles"][i+1]["title"]
+            description2 = data["articles"][i+1]["title"]
+            url2 = data["articles"][i+1]["url"]
+            urlToImage2 = data["articles"][i+1]["urlToImage"]
+            publishedAt2= data["articles"][i+1]["publishedAt"]
+
+            title3 = data["articles"][i+2]["title"]
+            description3 = data["articles"][i+2]["title"]
+            url3 = data["articles"][i+2]["url"]
+            urlToImage3 = data["articles"][i+2]["urlToImage"]
+            publishedAt3= data["articles"][i+2]["publishedAt"]
+
+            title4 = data["articles"][i+3]["title"]
+            description4 = data["articles"][i+3]["title"]
+            url4 = data["articles"][i+3]["url"]
+            urlToImage4 = data["articles"][i+3]["urlToImage"]
+            publishedAt4= data["articles"][i+3]["publishedAt"]
+        else:
+            err = "Error in parsing JSON"
+
     if request.method == "GET":
         if session.get("user_id") is None:
-            return render_template("index.html",key = "Logi",news= news)
+            #return render_template("index.html",key = "Logi")
+            return render_template("index.html",title1 = title1,description1 = description1, url1 = url1, urlToImage1 = urlToImage1, publishedAt1 = publishedAt1,title2 = title2,description2 = description2, url2 = url2, urlToImage2 = urlToImage2, publishedAt2 = publishedAt2,title3 = title3,description3 = description3, url3 = url3, urlToImage3 = urlToImage3, publishedAt3 = publishedAt3,title4 = title4,description4 = description4, url4 = url2, urlToImage4 = urlToImage4, publishedAt4 = publishedAt4, key = "Logi")
         else:
             userName = db.execute("select name from users where user_id=:i_d",i_d = session.get("user_id"))
             key = userName[0]["name"]
-            return render_template("index.html",key=key,news=news)
+            #return render_template("index.html",key=key)
+            return render_template("index.html",title1 = title1,description1 = description1, url1 = url1, urlToImage1 = urlToImage1, publishedAt1 = publishedAt1,title2 = title2,description2 = description2, url2 = url2, urlToImage2 = urlToImage2, publishedAt2 = publishedAt2,title3 = title3,description3 = description3, url3 = url3, urlToImage3 = urlToImage3, publishedAt3 = publishedAt3,title4 = title4,description4 = description4, url4 = url2, urlToImage4 = urlToImage4, publishedAt4 = publishedAt4, key = key)
 
     else:
         userlog = db.execute("SELECT is_logged FROM users WHERE user_id=:i_d;", i_d=session["user_id"])
         if userlog == 0:
-            return render_template("index.html",key="Login",news=news)
-
+            return render_template("index.html",title1 = title1,description1 = description1, url1 = url1, urlToImage1 = urlToImage1, publishedAt1 = publishedAt1,title2 = title2,description2 = description2, url2 = url2, urlToImage2 = urlToImage2, publishedAt2 = publishedAt2,title3 = title3,description3 = description3, url3 = url3, urlToImage3 = urlToImage3, publishedAt3 = publishedAt3,title4 = title4,description4 = description4, url4 = url2, urlToImage4 = urlToImage4, publishedAt4 = publishedAt4)
+            #return render_template("index.html",key="Login")
         elif userlog == 1:
-            username = "Dev"
-            return render_template("index.html",key = username,news=news)
+
+            return render_template("index.html",title1 = title1,description1 = description1, url1 = url1, urlToImage1 = urlToImage1, publishedAt1 = publishedAt1,title2 = title2,description2 = description2, url2 = url2, urlToImage2 = urlToImage2, publishedAt2 = publishedAt2,title3 = title3,description3 = description3, url3 = url3, urlToImage3 = urlToImage3, publishedAt3 = publishedAt3,title4 = title4,description4 = description4, url4 = url2, urlToImage4 = urlToImage4, publishedAt4 = publishedAt4)
+            #return render_template("index.html",key = username)
 
 
 
