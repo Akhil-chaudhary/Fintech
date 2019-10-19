@@ -39,7 +39,8 @@ db = SQL("sqlite:///fintech.db")
 #@login_required
 def index():
     if request.method == "GET":
-        return render_template("index.html")
+        userlog = True
+        return render_template("index.html",userlog = userlog)
 
 
 
@@ -75,7 +76,9 @@ def login():
         session["user_id"] = rows[0]["user_id"]
 
         # Redirect user to home page
-        return redirect("/")
+        #return redirect("/")
+        username = "Divesh"
+        return render_template("index.html", username = username)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:

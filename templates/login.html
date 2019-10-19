@@ -254,7 +254,7 @@
             <div class="login-reg-panel">
               <div class="register-info-box">
                 <h2>Don't have an account?</h2>
-                <a href="register.html" id="label-login" for="log-login-show" >Register</a>
+                <a href="/register" id="label-login" for="log-login-show" >Register</a>
                 <input
                   type="radio"
                   name="active-log-panel"
@@ -265,7 +265,7 @@
               <div class="white-panel">
                 <div class="login-show">
                   <h2>LOGIN</h2>
-                  <form>
+                  <form action="/login" method="post" id="login-form">
                   <input type="email" name="email" placeholder="Someone@something.com" />
                   <input type="password" name="password" placeholder="Password" />
                   {{error}}<br>
