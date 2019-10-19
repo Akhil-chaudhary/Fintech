@@ -159,7 +159,7 @@ input,select{
     box-shadow: 0 0 8px 3px #00c3ff;
     border-radius: 20px;
 }
-#currency_converter_calculator_subscribe_form_input input[type='submit'] {
+#currency_converter_calculator_subscribe_form_input input[type='submit'],#currency_calc_from,#currency_calc_to {
     display: inline-block;
     line-height: 50px;
     height: 50px;
@@ -178,7 +178,7 @@ input,select{
     animation-delay: 2.4s
   }
   @media only screen and (max-width: 480px) {
-    #currency_converter_calculator_subscribe_form_input input[type='submit'] {
+    #currency_converter_calculator_subscribe_form_input input[type='submit'],#currency_calc_from,#currency_calc_to{
       padding: 0 20px;
       height: 40px;
       line-height: 36px;
@@ -186,7 +186,7 @@ input,select{
       border: 2px solid #3d3f69;
     }
   }
-  #currency_converter_calculator_subscribe_form_input input[type='submit']:hover {
+  #currency_converter_calculator_subscribe_form_input input[type='submit']:hover ,  #currency_calc_from:hover,#currency_calc_to:hover{
   background: rgba(45,193,201,1);
   background: -moz-linear-gradient(left, rgba(45,193,201,1) 0%, rgba(57,100,208,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(45,193,201,1)), color-stop(100%, rgba(57,100,208,1)));
@@ -206,7 +206,7 @@ input,select{
     border: 1px solid #b5b5b5;
     outline: none;
   }
+  
   #currency_calc_from>option,#currency_calc_to>option{
       color: white;
   }
-  
