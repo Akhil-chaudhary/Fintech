@@ -73,12 +73,12 @@
                                 </ul>
                             </div>
 
-                            {% if userlog == True %}
-
+                            {% if key == "Logi" %}
+                                <div class="login-btn">
                                 <a href="/login" class="btn1"><i class="fa fa-user"></i><span>Login</span></a>
-
+                            </div>
                             {% else %}
-                                <h3>{{ username }}</h3>
+                                <h3>{{ key }}</h3>
                             {% endif %}
 
 

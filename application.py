@@ -6,15 +6,14 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
-
-from helpers import login_required
+#from helpers import login_required
 
 # Configure application
 app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-
+#session["global_id"] = None
 # Ensure responses aren't cached
 @app.after_request
 def after_request(response):
@@ -33,16 +32,23 @@ Session(app)
 
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///fintech.db")
-
+a=False
 
 @app.route("/", methods=["GET", "POST"])
-#@login_required
 def index():
     if request.method == "GET":
-        userlog = True
-        return render_template("index.html",userlog = userlog)
+        if session.get("user_id") is None:
+            return render_template("index.html",key = "Logi")
+        else:
+            return render_template("index.html",key="DEV")
 
-
+    else:
+        userlog = db.execute("SELECT is_logged FROM users WHERE user_id=:i_d;", i_d=session["user_id"])
+        if userlog == 0:
+            return render_template("index.html",key="Login")
+        elif userlog == 1:
+            username = "Dev"
+            return render_template("index.html",key = username)
 
 
 
@@ -74,11 +80,13 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["user_id"]
+        a=True
+        #CHange the bool is_logged
+        i_d = session["user_id"]
+        db.execute(f"UPDATE users SET is_logged = 1 WHERE user_id = {i_d};")
 
         # Redirect user to home page
-        #return redirect("/")
-        username = "Divesh"
-        return render_template("index.html", username = username)
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
@@ -111,7 +119,7 @@ def register():
             error = "Provided Email is used in another account"
             return render_template("register.html", error = error)
 
-        db.execute("Insert into users(email,password) values(:mail,:hash);", mail = request.form.get("email"), hash = phash)
+        db.execute("Insert into users(email,password,is_logged) values(:mail,:hash,:booled);", mail = request.form.get("email"), hash = phash, booled = 0)
         row = db.execute("Select user_id from users where email = :mail;", mail = mail)
         session["user_id"] = row[0]["user_id"]
 
