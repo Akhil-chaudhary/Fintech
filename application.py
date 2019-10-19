@@ -44,9 +44,6 @@ def index():
             key = userName[0]["name"]
             return render_template("index.html",key=key)
 
-        res = requests.get("https://newsapi.org/v2/everything?q=finance&from=2019-10-15&to=2019-10-15&sortBy=popularity&apiKey=16c14d73a1a24a76a5145fcda13637df")
-        data = res.json()
-
     else:
         userlog = db.execute("SELECT is_logged FROM users WHERE user_id=:i_d;", i_d=session["user_id"])
         if userlog == 0:
