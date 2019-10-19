@@ -38,6 +38,8 @@
     <!-- responsive css -->
     <link rel="stylesheet" href="../static/css/responsive.css" />
     <!-- modernizr css -->
+    
+    <link rel="stylesheet" href="../static/css/cc.css" />
     <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="{{ url_for('static', filename='index.js') }}"></script>
     <style>
@@ -241,57 +243,24 @@
         </div>
       </section>
       <!--form-->
+      <br>
       <div id="2">
         <section>
-          <div class="container">
-            <div class="row" style="flex: ;">
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form">
-                <form action="/currency" method="post" id="form-exchange">
-                  <fieldset>
-                    <p>
-                      <label>From:</label><br>
-                      <select id="Currency1" class="currency1">
-                        <option value="USD">United States dollar</option>
-                        <option value="GPB">Pound sterling</option>
-                        <option value="INR">Indian National Rupee</option>
-                        <option value="EUR">European euro</option>
-                      </select><br><br>
-                      <label>Amount:</label><br>
-                    <input id="amt"  type="number" name="amount" />
-                    </p>
-                  </fieldset>
-
-              </div>
-              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form">
-
-                  <fieldset>
-                    <p>
-                      <label>To:</label><br>
-                      <select id="Currency2" class="currency2">
-                        <option value="USD">United States dollar</option>
-                        <option value="GPB">Pound sterling</option>
-                        <option value="INR">Indian National Rupee</option>
-                        <option value="EUR">European euro</option>
-                      </select><br><br>
-                      <label>Amount:</label><br>
-                        <div id="result">{{ calculated }}</div>
-                    </p>
-                  </fieldset>
-                  <div
-                      class="about-img wow  fadeInUp animated"
-                      data-wow-duration="1.0s"
-                      style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;">
-                    <button class="btn3" type="submit" action="/currency" method="POST">Issue</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
+          <div class="container white-panel">
+              <div id="demo-rate-convert" style="width: 200%;"></div>
+              <script>
+                  var apiTargetHtmlObj = document.getElementById("demo-rate-convert");
+                  var tmScript = document.createElement("script");
+                  tmScript.src = "https://www.transfermate.com/en/exchange_rates_api.asp";
+                  document.getElementsByTagName("head")[0].appendChild(tmScript);
+              </script>
+          </div>
         </section>
       </div>
       <script src="../static/js/currency.js"></script>
       <!--main area end here-->
       <!--Footer area start here-->
+      <br>
       <footer id="5" class="top-foo">
         <div id="footer-js">
           <div class="footer-top section">
