@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="../static/css/responsive.css" />
     <!-- modernizr css -->
     <script src="../static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
     <style>
       html {
         scroll-behavior: smooth;
@@ -250,50 +251,50 @@
           <div class="container">
             <div class="row" style="flex: ;">
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form">
-                <form>
+                <form id="form-exchange">
                   <fieldset>
                     <p>
-                      <label>Currency:</label><br>
-                      <select id="Currency1">
-                        <option value="1">one</option>
-                        <option value="2">two</option>
-                        <option value="3">three</option>
-                        <option value="4">four</option>
+                      <label>From:</label><br>
+                      <select id="Currency1" class="currency1">
+                        <option value="USD">United States dollar</option>
+                        <option value="GPB">Pound sterling</option>
+                        <option value="INR">Indian National Rupee</option>
+                        <option value="EUR">European euro</option>
                       </select><br><br>
                       <label>Amount:</label><br>
-                    <input type="number" name="Amount" />
+                    <input id="amt"  type="number" name="amount" />
                     </p>
                   </fieldset>
-                </form>
+
               </div>
               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form">
-                <form>
+
                   <fieldset>
                     <p>
-                      <label>Currency:</label><br>
-                      <select id="Currency1">
-                        <option value="1">one</option>
-                        <option value="2">two</option>
-                        <option value="3">three</option>
-                        <option value="4">four</option>
+                      <label>To:</label><br>
+                      <select id="Currency2" class="currency2">
+                        <option value="USD">United States dollar</option>
+                        <option value="GPB">Pound sterling</option>
+                        <option value="INR">Indian National Rupee</option>
+                        <option value="EUR">European euro</option>
                       </select><br><br>
                       <label>Amount:</label><br>
-                    <input type="number" name="Amount" />
+                        <div id="result">{{ calculated }}</div>
                     </p>
                   </fieldset>
+                  <div
+                      class="about-img wow  fadeInUp animated"
+                      data-wow-duration="1.0s"
+                      style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;">
+                    <button class="btn3" type="submit" action="/currency" method="POST">Issue</button>
+                  </div>
                 </form>
               </div>
             </div>
-            <div
-              class="about-img wow  fadeInUp animated"
-              data-wow-duration="1.0s"
-              style="visibility: visible; animation-duration: 1.0s; animation-name: fadeInUp;text-align: center;"
-            >
-              <a href="#2"><button class="btn3">Calculate</button></a>
-            </div>
-          </div>
+
         </section>
       </div>
+      <script src="../static/js/currency.js"></script>
       <!--main area end here-->
       <!--Footer area start here-->
       <footer id="5" class="top-foo">

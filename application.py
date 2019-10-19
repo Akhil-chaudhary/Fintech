@@ -1,5 +1,5 @@
 import os
-
+import requests
 from cs50 import SQL
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
@@ -117,3 +117,19 @@ def register():
 
     else:
         return render_template("register.html")
+
+
+@app.route("/currency", methods=["GET", "POST"])
+def currency():
+    """Currency converteer"""
+    if request.method == "GET":
+        return render_template("currency.html", calculated = "click Convert")
+    elif request.method == "POST":
+        amt = request.form.get("amount")
+        base = request.form.get("currency1")
+        symbol = request.form.get("currency2")
+        res = requests.get(f"http://data.fixer.io/api/latest?access_key=87234300c621de72126485e18b505d08&symbols={base},{symbol}&format=1")
+        data = res.json()
+        changed = (data['rates']['USD'] /data['rates']['INR']) * amt
+        info = changed + symbol
+        return render_template("currencyChanged.html", calculated=info)
