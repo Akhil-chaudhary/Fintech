@@ -30,4 +30,6 @@ One can easily deploy this webapp of hosting platforms like netify, firebase, he
 
 ## Author
 
-* **Akhil Chaudhary** **Divesh Singh** **Sahyog Saini** 
+* **Akhil Chaudhary** 
+* **Divesh Singh** 
+* **Sahyog Saini** 
